@@ -23,7 +23,8 @@
     var m=f.msg.value.trim();
     var txt='Bonjour, je souhaite un contact au sujet de : '+f.besoin.value+'.\nNom : '+f.nom.value.trim()+'\nTéléphone : '+f.tel.value.trim()+'\nCommune : '+f.commune.value.trim()+(m?'\nMessage : '+m:'');
     pre.textContent=txt;document.getElementById('sms').href='sms:'+T+'?&body='+encodeURIComponent(txt);
-    rc.hidden=false;rc.focus();rc.scrollIntoView({behavior:'smooth',block:'start'});});
+    f.hidden=true;rc.hidden=false;rc.focus();});
+  var ed=document.getElementById('edit');if(ed)ed.addEventListener('click',function(){rc.hidden=true;f.hidden=false;f.nom.focus();});
   document.getElementById('copy').addEventListener('click',function(){var s=document.getElementById('copied'),t=pre.textContent;
     function ok(){s.textContent='Message copié.';}
     function fb(){var r=document.createRange();r.selectNodeContents(pre);var sel=getSelection();sel.removeAllRanges();sel.addRange(r);s.textContent='Texte sélectionné : copiez-le avec Ctrl+C.';}
