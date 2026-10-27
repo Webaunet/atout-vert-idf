@@ -33,25 +33,38 @@
 
 <main id="contenu">
 <section class="ph" style="--next:var(--bg)">
-  <div class="wrap">
-    <p class="eyebrow">Contact</p>
-    <h1>Parlez-nous de votre projet</h1>
-    <p class="lead">Remplissez le formulaire : vous obtenez un message prêt à envoyer par SMS, ou appelez directement.</p>
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h1>Parlons de votre jardin</h1>
+      <p class="lead">Dites-nous ce que vous imaginez : vous obtenez un message prêt à envoyer par SMS à ATOUT VERT IDF. Vous préférez parler ? Un appel suffit.</p>
+      <div class="actions"><a class="btn p" href="tel:+33660498852">Appeler le 06 60 49 88 52</a><a class="btn o" href="#formulaire">Remplir le formulaire</a></div>
+    </div>
+    <div class="leaf"><img src="images/creation.jpg" width="1000" height="545" alt="Jardin aménagé avec pelouse, massifs et allée"></div>
   </div>
 </section>
 
-<section class="sec" style="background:var(--bg);--next:var(--forest);align-items:flex-start">
+<section class="sec cform" id="formulaire" style="background:var(--bg);--next:var(--bg2);align-items:flex-start">
   <div class="wrap ct">
-    <form class="form" id="cform" novalidate>
-      <h2 style="font-size:1.6rem;margin-bottom:20px">Votre demande</h2>
-      <div class="fld"><label for="nom">Nom</label><input id="nom" name="nom" type="text" autocomplete="name" required aria-describedby="e-nom"><p class="err" id="e-nom" role="alert"></p></div>
-      <div class="fld"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required aria-describedby="e-tel"><p class="err" id="e-tel" role="alert"></p></div>
-      <div class="fld"><label for="commune">Commune</label><input id="commune" name="commune" type="text" autocomplete="address-level2" required aria-describedby="e-commune"><p class="err" id="e-commune" role="alert"></p></div>
-      <div class="fld"><label for="besoin">Votre besoin</label><select id="besoin" name="besoin" required aria-describedby="e-besoin"><option value="">Choisir…</option><option>Création de jardin</option><option>Terrasse ou allée</option><option>Maçonnerie paysagère</option><option>Entretien des espaces verts</option><option>Autre demande</option></select><p class="err" id="e-besoin" role="alert"></p></div>
-      <div class="fld"><label for="msg">Message <span class="opt">(facultatif)</span></label><textarea id="msg" name="msg" rows="4"></textarea></div>
-      <button class="btn p" type="submit">Préparer mon message</button>
-    </form>
+    <div class="side txt">
+      <p class="eyebrow">Votre demande</p>
+      <h2>Quatre informations suffisent</h2>
+      <p>Votre nom, un numéro pour vous rappeler, votre commune et le type de travaux. Un message libre est possible, sans obligation.</p>
+      <ul><li>Création de jardin, terrasse ou allée</li><li>Maçonnerie paysagère</li><li>Entretien des espaces verts</li></ul>
+    </div>
     <div>
+      <form class="form" id="cform" novalidate>
+        <div class="row">
+          <div class="fld"><label for="nom">Nom</label><input id="nom" name="nom" type="text" autocomplete="name" placeholder="Prénom et nom" required aria-describedby="e-nom"><p class="err" id="e-nom" role="alert"></p></div>
+          <div class="fld"><label for="tel">Téléphone</label><input id="tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="06 12 34 56 78" required aria-describedby="e-tel"><p class="err" id="e-tel" role="alert"></p></div>
+        </div>
+        <div class="row">
+          <div class="fld"><label for="commune">Commune</label><input id="commune" name="commune" type="text" autocomplete="address-level2" placeholder="Évry-Courcouronnes" required aria-describedby="e-commune"><p class="err" id="e-commune" role="alert"></p></div>
+          <div class="fld"><label for="besoin">Votre besoin</label><select id="besoin" name="besoin" required aria-describedby="e-besoin"><option value="">Choisir…</option><option>Création de jardin</option><option>Terrasse ou allée</option><option>Maçonnerie paysagère</option><option>Entretien des espaces verts</option><option>Autre demande</option></select><p class="err" id="e-besoin" role="alert"></p></div>
+        </div>
+        <div class="fld"><label for="msg">Message <span class="opt">(facultatif)</span></label><textarea id="msg" name="msg" rows="4" placeholder="Surface, type de terrain, délai souhaité…"></textarea></div>
+        <button class="btn p" type="submit">Préparer mon message</button>
+      </form>
       <div class="recap" id="recap" hidden tabindex="-1">
         <p class="ok">Message prêt</p>
         <h2 style="font-size:1.4rem">Envoyez-le à ATOUT VERT IDF</h2>
@@ -63,14 +76,16 @@
   </div>
 </section>
 
-<section class="sec" style="min-height:70svh;background:var(--forest);color:var(--forest-ink);--next:var(--forest)"><div class="wrap">
-      <div class="panel coord" id="coord" style="background:transparent;box-shadow:none;padding:0">
-        <p class="eyebrow" style="color:var(--lime)">Coordonnées</p>
-        <h2 style="font-size:1.6rem">ATOUT VERT IDF</h2>
-        <p>91000 Évry-Courcouronnes</p>
-        <div class="tels" style="margin-top:16px"><div><small>Mobile</small><a href="tel:+33660498852">06 60 49 88 52</a></div><div><small>Fixe</small><a href="tel:+33148816563">01 48 81 65 63</a></div></div>
-      </div>
-</div></section>
+<section class="sec coord" id="coord" style="background:var(--bg2);--next:var(--forest);min-height:70svh">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Plutôt par téléphone ?</p><h2>ATOUT VERT IDF, à Évry-Courcouronnes</h2></div>
+    <ul class="tiles">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><small>Mobile</small><a href="tel:+33660498852">06 60 49 88 52</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><small>Fixe</small><a href="tel:+33148816563">01 48 81 65 63</a></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><small>Commune</small><span class="v">91000 Évry-Courcouronnes</span></li>
+    </ul>
+  </div>
+</section>
 </main>
 
 <footer class="ft">
